@@ -8,13 +8,19 @@ import {ProgressComponent} from './progress/progress.component';
 import {PagesComponent} from './pages.component';
 
 import {PAGES_ROUTES} from './pages.routes';
+import {IncComponent} from '../components/inc/inc.component';
+import {FormsModule} from '@angular/forms';
+import {ChartsModule} from 'ng2-charts';
+import {GraphComponent} from '../components/graph/graph.component';
 
 @NgModule({
   declarations: [
     DashboardComponent,
     Graph1Component,
     PagesComponent,
-    ProgressComponent
+    ProgressComponent,
+    IncComponent,
+    GraphComponent
   ],
   exports: [
     DashboardComponent,
@@ -23,7 +29,9 @@ import {PAGES_ROUTES} from './pages.routes';
     ProgressComponent
   ],
   imports: [
+    ChartsModule,
     SharedModule,
+    FormsModule,
     PAGES_ROUTES
   ]
 })
