@@ -1,27 +1,28 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import {PagesModule} from './pages/pages.module';
 
-import {APP_ROUTES} from './app.routes';
-import {AppComponent} from './app.component';
-import {LoginComponent} from './auth/login/login.component';
-import {RegisterComponent} from './auth/register/register.component';
+// modules
+import {PagesModule} from './pages/pages.module';
 import {FormsModule} from '@angular/forms';
 import {AppRoutingModule} from './app-routing.module';
 import {SharedModule} from './shared/shared.module';
+import {AuthModule} from './auth/auth.module';
+
+// components
+import {AppComponent} from './app.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent,
-    LoginComponent,
-    RegisterComponent
+    AppComponent
   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
     PagesModule,
     FormsModule,
-    SharedModule
+    SharedModule,
+    AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]

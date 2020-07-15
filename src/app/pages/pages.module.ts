@@ -7,34 +7,39 @@ import {Graph1Component} from './graph1/graph1.component';
 import {ProgressComponent} from './progress/progress.component';
 import {PagesComponent} from './pages.component';
 
-import {PAGES_ROUTES} from './pages.routes';
 import {IncComponent} from '../components/inc/inc.component';
 import {FormsModule} from '@angular/forms';
 import {ChartsModule} from 'ng2-charts';
 import {GraphComponent} from '../components/graph/graph.component';
 import {AccountSettingsComponent} from './account-settings/account-settings.component';
+import {CommonModule} from '@angular/common';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
+    AccountSettingsComponent,
     DashboardComponent,
-    Graph1Component,
-    PagesComponent,
-    ProgressComponent,
-    IncComponent,
     GraphComponent,
-    AccountSettingsComponent
+    Graph1Component,
+    IncComponent,
+    ProgressComponent,
+    PagesComponent
   ],
   exports: [
+    AccountSettingsComponent,
     DashboardComponent,
+    GraphComponent,
     Graph1Component,
-    PagesComponent,
-    ProgressComponent
+    IncComponent,
+    ProgressComponent,
+    PagesComponent
   ],
   imports: [
     ChartsModule,
-    SharedModule,
+    CommonModule,
     FormsModule,
-    PAGES_ROUTES
+    SharedModule,
+    RouterModule
   ]
 })
 export class PagesModule {}
