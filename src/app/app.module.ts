@@ -4,9 +4,11 @@ import {PagesModule} from './pages/pages.module';
 
 import {APP_ROUTES} from './app.routes';
 import {AppComponent} from './app.component';
-import {LoginComponent} from './login/login.component';
-import {RegisterComponent} from './login/register.component';
+import {LoginComponent} from './auth/login/login.component';
+import {RegisterComponent} from './auth/register/register.component';
 import {FormsModule} from '@angular/forms';
+import {AppRoutingModule} from './app-routing.module';
+import {SharedModule} from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -15,10 +17,11 @@ import {FormsModule} from '@angular/forms';
     RegisterComponent
   ],
   imports: [
-    APP_ROUTES,
+    AppRoutingModule,
     BrowserModule,
     PagesModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

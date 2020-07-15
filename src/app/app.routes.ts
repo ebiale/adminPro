@@ -1,8 +1,8 @@
 import {RouterModule, Routes} from '@angular/router';
 
-import {LoginComponent} from './login/login.component';
-import {NopagefoundComponent} from './shared/nopagefound/nopagefound.component';
-import {RegisterComponent} from './login/register.component';
+import {LoginComponent} from './auth/login/login.component';
+import {NopagefoundComponent} from './pages/nopagefound/nopagefound.component';
+import {RegisterComponent} from './auth/register/register.component';
 
 
 const appRoutes: Routes = [

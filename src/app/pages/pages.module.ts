@@ -12,6 +12,7 @@ import {IncComponent} from '../components/inc/inc.component';
 import {FormsModule} from '@angular/forms';
 import {ChartsModule} from 'ng2-charts';
 import {GraphComponent} from '../components/graph/graph.component';
+import {AccountSettingsComponent} from './account-settings/account-settings.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {GraphComponent} from '../components/graph/graph.component';
     PagesComponent,
     ProgressComponent,
     IncComponent,
-    GraphComponent
+    GraphComponent,
+    AccountSettingsComponent
   ],
   exports: [
     DashboardComponent,
