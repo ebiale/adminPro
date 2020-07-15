@@ -5,16 +5,14 @@
         <h4 class="card-title">Progress Bar</h4>
         <div class="progress">
           <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-               [attr.aria-valuenow]="progress"
-               aria-valuemin="0" aria-valuemax="100"
-               [style.width]="progress + '%'"></div>
+               [style.width]="getProgress(progress)"></div>
         </div>
         <br>
         <div class="progress">
           <div class="progress-bar progress-bar-animated bg-danger" role="progressbar"
                [attr.aria-valuenow]="progress2"
                aria-valuemin="0" aria-valuemax="100"
-               [style.width]="progress2 + '%'"></div>
+               [style.width]="getProgress(progress2)"></div>
         </div>
       </div>
     </div>

@@ -12,7 +12,7 @@ export class Graph1Component implements OnInit {
 
   graphs: any = {
     graph1: {
-      labels: ['With Bacon', 'With butter', 'With Honey'],
+      labels: ['Downloads', 'Uploads', 'Sales'],
       data:  [24, 30, 46],
       type: 'doughnut',
       title: 'You can eat bread'
