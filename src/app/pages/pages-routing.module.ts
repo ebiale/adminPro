@@ -14,7 +14,7 @@ const routes: Routes = [
       [
         {path: '', component: DashboardComponent},
         {path: 'progress', component: ProgressComponent},
-        {path: 'graph1', component: Graph1Component},
+        {path: 'chart', component: Graph1Component},
         {path: 'account-settings', component: AccountSettingsComponent}
       ]
   }
