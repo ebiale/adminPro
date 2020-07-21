@@ -1,4 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
-#themecolors a {
+#themecolors a, .cursor a {
   cursor: pointer;
+}
+
+.validation {
+  position: absolute;
+  margin-top: -25px;
+}
+
+.validation .text-danger {
+  font-size: 10px;
+}
+
+#my-signin2 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
 }

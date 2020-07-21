@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class SettingsService {
   private themeLink = document.querySelector('#theme');
   constructor() {
-    this.themeLink.setAttribute('href', localStorage.getItem('theme') || 'assets/css/colors/${default-dark}.css');
+    this.themeLink.setAttribute('href', localStorage.getItem('theme') || '/assets/css/colors/default-dark.css');
   }
 
   changeTheme(color: string, links) {
