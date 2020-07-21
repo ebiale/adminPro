@@ -9,7 +9,10 @@ import {UserService} from '../../services/user.service';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private userService: UserService) { }
+  public user;
+  constructor(private userService: UserService) {
+    this.user = userService.user;
+  }
 
   ngOnInit(): void {
   }

@@ -160,8 +160,8 @@ html body .db {
 Blockquote
 *******************/
 html body blockquote {
-  border-left: 5px solid #398bf7;
   border: 1px solid rgba(120, 130, 140, 0.13);
+  border-left: 5px solid #398bf7;
   padding: 15px; }
 
 .clear {
@@ -174,7 +174,7 @@ ol li {
 Paddings
 *******************/
 html body .p-0 {
-  padding: 0px; }
+  padding: 0; }
 
 html body .p-10 {
   padding: 10px; }
@@ -186,7 +186,7 @@ html body .p-30 {
   padding: 30px; }
 
 html body .p-l-0 {
-  padding-left: 0px; }
+  padding-left: 0; }
 
 html body .p-l-10 {
   padding-left: 10px; }
@@ -195,7 +195,7 @@ html body .p-l-20 {
   padding-left: 20px; }
 
 html body .p-r-0 {
-  padding-right: 0px; }
+  padding-right: 0; }
 
 html body .p-r-10 {
   padding-right: 10px; }
@@ -210,7 +210,7 @@ html body .p-r-40 {
   padding-right: 40px; }
 
 html body .p-t-0 {
-  padding-top: 0px; }
+  padding-top: 0; }
 
 html body .p-t-10 {
   padding-top: 10px; }
@@ -222,7 +222,7 @@ html body .p-t-30 {
   padding-top: 30px; }
 
 html body .p-b-0 {
-  padding-bottom: 0px; }
+  padding-bottom: 0; }
 
 html body .p-b-5 {
   padding-bottom: 5px; }
@@ -243,7 +243,7 @@ html body .p-b-40 {
 Margin
 *******************/
 html body .m-0 {
-  margin: 0px; }
+  margin: 0; }
 
 html body .m-l-5 {
   margin-left: 5px; }
@@ -282,7 +282,7 @@ html body .m-r-40 {
   margin-right: 40px; }
 
 html body .m-t-0 {
-  margin-top: 0px; }
+  margin-top: 0; }
 
 html body .m-t-5 {
   margin-top: 5px; }
@@ -303,7 +303,7 @@ html body .m-t-40 {
   margin-top: 40px; }
 
 html body .m-b-0 {
-  margin-bottom: 0px; }
+  margin-bottom: 0; }
 
 html body .m-b-5 {
   margin-bottom: 5px; }
@@ -681,13 +681,13 @@ Labels
 List-style-none
 ******************/
 ul.list-style-none {
-  margin: 0px;
-  padding: 0px; }
+  margin: 0;
+  padding: 0; }
   ul.list-style-none li {
     list-style: none; }
     ul.list-style-none li a {
       color: #67757c;
-      padding: 8px 0px;
+      padding: 8px 0;
       display: block;
       text-decoration: none; }
       ul.list-style-none li a:hover {
@@ -704,8 +704,8 @@ dropdown-item
 Layouts
 ******************/
 .card-no-border .card {
-  border: 0px;
-  border-radius: 0px;
+  border: 0;
+  border-radius: 0;
   -webkit-box-shadow: none;
   box-shadow: none; }
 
@@ -722,8 +722,8 @@ Layouts
 
 .card-fullscreen {
   position: fixed;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   z-index: 9999;
@@ -736,7 +736,7 @@ Layouts
   display: none; }
 
 .single-column .page-wrapper {
-  margin-left: 0px; }
+  margin-left: 0; }
 
 .fix-width {
   width: 100%;
@@ -756,12 +756,12 @@ Main sidebar
   position: absolute;
   width: 240px;
   height: 100%;
-  top: 0px;
+  top: 0;
   z-index: 20;
   padding-top: 70px;
   background: #fff;
-  -webkit-box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08);
-  box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08); }
+  -webkit-box-shadow: 1px 0 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 1px 0 20px rgba(0, 0, 0, 0.08); }
 
 .fix-sidebar .left-sidebar {
   position: fixed; }
@@ -771,6 +771,7 @@ use profile section
 ******************/
 .sidebar-nav .user-profile > a img {
   width: 30px;
+  height: 30px;
   border-radius: 100%;
   margin-right: 10px; }
 
@@ -794,10 +795,10 @@ sidebar navigation
 
 .sidebar-nav {
   background: #fff;
-  padding: 15px 0 0 0px; }
+  padding: 15px 0 0 0; }
   .sidebar-nav ul {
-    margin: 0px;
-    padding: 0px; }
+    margin: 0;
+    padding: 0; }
     .sidebar-nav ul li {
       list-style: none; }
       .sidebar-nav ul li a {
@@ -821,7 +822,7 @@ sidebar navigation
           padding-left: 15px; }
       .sidebar-nav ul li.nav-small-cap {
         font-size: 12px;
-        margin-bottom: 0px;
+        margin-bottom: 0;
         padding: 14px 14px 14px 20px;
         color: #263238;
         font-weight: 500; }
@@ -924,7 +925,7 @@ When click on sidebar toggler and also for tablet
   .mini-sidebar .sidebar-nav #sidebarnav .user-profile > a {
     padding: 12px 20px; }
   .mini-sidebar .scroll-sidebar {
-    padding-bottom: 0px;
+    padding-bottom: 0;
     position: absolute; }
   .mini-sidebar .hide-menu,
   .mini-sidebar .nav-small-cap,
@@ -955,7 +956,7 @@ When click on sidebar toggler and also for tablet
     left: -240px; }
   .mini-sidebar.show-sidebar .left-sidebar,
   .mini-sidebar.show-sidebar .sidebar-footer {
-    left: 0px; } }
+    left: 0; } }
 
 /*
 Template Name: Admin pro Admin
@@ -1034,16 +1035,16 @@ File: scss
     padding: 0 10px; }
   .topbar .top-navbar {
     min-height: 70px;
-    padding: 0px; }
+    padding: 0; }
     .topbar .top-navbar .dropdown-toggle::after {
       display: none; }
     .topbar .top-navbar .navbar-header {
       line-height: 55px;
       padding-left: 10px; }
       .topbar .top-navbar .navbar-header .navbar-brand {
-        margin-right: 0px;
-        padding-bottom: 0px;
-        padding-top: 0px; }
+        margin-right: 0;
+        padding-bottom: 0;
+        padding-top: 0; }
         .topbar .top-navbar .navbar-header .navbar-brand .light-logo {
           display: none; }
         .topbar .top-navbar .navbar-header .navbar-brand b {
@@ -1064,6 +1065,7 @@ File: scss
       background: rgba(0, 0, 0, 0.05); }
   .topbar .profile-pic {
     width: 30px;
+    height: 30px;
     border-radius: 100%; }
   .topbar .dropdown-menu {
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
@@ -1073,12 +1075,12 @@ File: scss
     .topbar .dropdown-menu .dropdown-item {
       padding: 7px 1.5rem; }
   .topbar ul.dropdown-user {
-    padding: 0px;
+    padding: 0;
     min-width: 270px; }
     .topbar ul.dropdown-user li {
       list-style: none;
-      padding: 0px;
-      margin: 0px; }
+      padding: 0;
+      margin: 0; }
       .topbar ul.dropdown-user li.divider {
         height: 1px;
         margin: 9px 0;
@@ -1097,7 +1099,7 @@ File: scss
           display: inline-block;
           padding-left: 10px; }
           .topbar ul.dropdown-user li .dw-user-box .u-text h4 {
-            margin: 0px;
+            margin: 0;
             font-size: 15px; }
           .topbar ul.dropdown-user li .dw-user-box .u-text p {
             margin-bottom: 2px;
@@ -1119,19 +1121,18 @@ File: scss
 
 .search-box .app-search {
   position: absolute;
-  margin: 0px;
-  display: block;
+  margin: 0;
   z-index: 110;
   width: 100%;
   top: -1px;
-  -webkit-box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
-  box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
   display: none;
-  left: 0px; }
+  left: 0; }
   .search-box .app-search input {
     width: 100.5%;
     padding: 25px 40px 25px 20px;
-    border-radius: 0px;
+    border-radius: 0;
     font-size: 17px;
     -webkit-transition: 0.5s ease-in;
     -o-transition: 0.5s ease-in;
@@ -1154,7 +1155,7 @@ File: scss
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  padding-left: 0px; }
+  padding-left: 0; }
 
 .logo-center .top-navbar .navbar-header {
   position: absolute;
@@ -1254,7 +1255,7 @@ Notify
   .hdr-nav-bar .navbar .navbar-brand {
     padding: 20px 5px; }
   .hdr-nav-bar .navbar .navbar-toggler {
-    border: 0px;
+    border: 0;
     cursor: pointer; }
   .hdr-nav-bar .navbar .custom-select {
     border-radius: 60px;
@@ -1269,18 +1270,18 @@ Notify
 .page-titles {
   background: #f4f6f9;
   margin-bottom: 20px;
-  padding: 0px; }
+  padding: 0; }
   .page-titles h3 {
-    margin-bottom: 0px;
-    margin-top: 0px; }
+    margin-bottom: 0;
+    margin-top: 0; }
   .page-titles .breadcrumb {
-    padding: 0px;
-    margin-bottom: 0px;
+    padding: 0;
+    margin-bottom: 0;
     background: transparent;
     font-size: 14px; }
     .page-titles .breadcrumb li {
-      margin-top: 0px;
-      margin-bottom: 0px; }
+      margin-top: 0;
+      margin-bottom: 0; }
     .page-titles .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
       content: "\e649";
       font-family: themify;
@@ -1361,7 +1362,7 @@ Notify
   display: none;
   z-index: 1100;
   background: #ffffff;
-  top: 0px;
+  top: 0;
   padding-bottom: 20px;
   height: 100%;
   -webkit-box-shadow: 5px 1px 40px rgba(0, 0, 0, 0.1);
@@ -1385,14 +1386,14 @@ Notify
   .right-sidebar .r-panel-body {
     padding: 20px; }
     .right-sidebar .r-panel-body ul {
-      margin: 0px;
-      padding: 0px; }
+      margin: 0;
+      padding: 0; }
       .right-sidebar .r-panel-body ul li {
         list-style: none;
         padding: 5px 0; }
 
 .shw-rside {
-  right: 0px;
+  right: 0;
   width: 240px;
   display: block; }
 
@@ -1545,7 +1546,7 @@ ul#themecolors {
 .footer {
   bottom: 0;
   color: #67757c;
-  left: 0px;
+  left: 0;
   padding: 17px 15px;
   position: absolute;
   right: 0;
@@ -1567,19 +1568,19 @@ Megamenu
   .mega-dropdown .dropdown-menu {
     width: 100%;
     padding: 30px;
-    margin-top: 0px; }
+    margin-top: 0; }
   .mega-dropdown ul {
-    padding: 0px; }
+    padding: 0; }
     .mega-dropdown ul li {
       list-style: none; }
   .mega-dropdown .carousel-item .container {
-    padding: 0px; }
+    padding: 0; }
   .mega-dropdown .nav-accordion .card {
     margin-bottom: 1px; }
   .mega-dropdown .nav-accordion .card-header {
     background: #ffffff; }
     .mega-dropdown .nav-accordion .card-header h5 {
-      margin: 0px; }
+      margin: 0; }
       .mega-dropdown .nav-accordion .card-header h5 a {
         text-decoration: none;
         color: #67757c; }
@@ -1702,10 +1703,10 @@ Table td vertical middle
   vertical-align: middle; }
 
 .no-th-brd.table th {
-  border: 0px; }
+  border: 0; }
 
 .table.no-border tbody td {
-  border: 0px; }
+  border: 0; }
 
 /*******************
 Other comon js for all pages
@@ -1729,11 +1730,11 @@ Other comon js for all pages
   display: none; }
 
 .single-column .page-wrapper {
-  margin-left: 0px !important; }
+  margin-left: 0 !important; }
 
 .profile-tab li a.nav-link,
 .customtab li a.nav-link {
-  border: 0px;
+  border: 0;
   padding: 15px 20px;
   color: #67757c; }
   .profile-tab li a.nav-link.active,
@@ -1854,7 +1855,7 @@ Pagination
   width: 40px;
   height: 40px;
   background: #e9edf2;
-  border: 0px;
+  border: 0;
   text-align: center;
   border-radius: 100%; }
   .pagination-circle li a:first-child, .pagination-circle li a:last-child {
@@ -1893,7 +1894,7 @@ Buttons
 
 .btn-group label {
   color: #ffffff !important;
-  margin-bottom: 0px; }
+  margin-bottom: 0; }
   .btn-group label.btn-secondary {
     color: #67757c !important; }
 
@@ -2426,7 +2427,7 @@ Buttons
   color: #ffffff; }
 
 .button-box .btn {
-  margin: 0 8px 8px 0px; }
+  margin: 0 8px 8px 0; }
 
 .btn-label {
   background: rgba(0, 0, 0, 0.05);
@@ -2505,7 +2506,7 @@ Buttons
 
 .no-button-group .btn {
   margin-bottom: 5px;
-  margin-right: 0px; }
+  margin-right: 0; }
 
 .btn .text-active {
   display: none; }
@@ -2574,10 +2575,10 @@ form label {
   margin-bottom: 25px; }
 
 .form-horizontal label {
-  margin-bottom: 0px; }
+  margin-bottom: 0; }
 
 .form-control-static {
-  padding-top: 0px; }
+  padding-top: 0; }
 
 .form-bordered .form-group {
   border-bottom: 1px solid rgba(120, 130, 140, 0.13);
@@ -2590,7 +2591,7 @@ Form Dropzone
   border: 1px dashed #b1b8bb; }
   .dropzone .dz-message {
     padding: 5% 0;
-    margin: 0px; }
+    margin: 0; }
 
 /*******************
 Form Pickers
@@ -2683,7 +2684,7 @@ Form addons page
 .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
   float: right;
   color: #ffffff;
-  margin-right: 0px;
+  margin-right: 0;
   margin-left: 4px; }
 
 .select2-container--default .select2-selection--multiple .select2-selection__choice {
@@ -2736,9 +2737,9 @@ Form Material page
   overflow: hidden; }
 
 .form-control-line .form-control {
-  border: 0px;
-  border-radius: 0px;
-  padding-left: 0px;
+  border: 0;
+  border-radius: 0;
+  padding-left: 0;
   border-bottom: 1px solid #f6f9ff; }
   .form-control-line .form-control:focus {
     border-bottom: 1px solid #398bf7; }
@@ -3040,7 +3041,7 @@ form p:last-child {
   width: 20px;
   background-color: transparent;
   border: 1px solid #b1b8bb;
-  top: 0px;
+  top: 0;
   z-index: 0; }
 
 [type="checkbox"].filled-in:checked + label:before {
@@ -3124,7 +3125,6 @@ form p:last-child {
   height: 15px;
   background-color: #818181;
   border-radius: 15px;
-  margin-right: 10px;
   -webkit-transition: background 0.3s ease;
   -o-transition: background 0.3s ease;
   transition: background 0.3s ease;
@@ -3174,9 +3174,9 @@ input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::after {
   -ms-transform: scale(0);
   transform: scale(0);
   display: inline-block;
-  -webkit-transform-origin: right 0px;
-  -ms-transform-origin: right 0px;
-  transform-origin: right 0px; }
+  -webkit-transform-origin: right 0;
+  -ms-transform-origin: right 0;
+  transform-origin: right 0; }
 
 .scale-up-left {
   -webkit-transition: all 0.3s ease;
@@ -3186,25 +3186,25 @@ input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::after {
   -ms-transform: scale(0);
   transform: scale(0);
   display: inline-block;
-  -webkit-transform-origin: left 0px;
-  -ms-transform-origin: left 0px;
-  transform-origin: left 0px; }
+  -webkit-transform-origin: left 0;
+  -ms-transform-origin: left 0;
+  transform-origin: left 0; }
 
 .show > .scale-up {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  -webkit-transform-origin: right 0px;
-  -ms-transform-origin: right 0px;
-  transform-origin: right 0px; }
+  -webkit-transform-origin: right 0;
+  -ms-transform-origin: right 0;
+  transform-origin: right 0; }
 
 .show > .scale-up-left {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  -webkit-transform-origin: left 0px;
-  -ms-transform-origin: left 0px;
-  transform-origin: left 0px; }
+  -webkit-transform-origin: left 0;
+  -ms-transform-origin: left 0;
+  transform-origin: left 0; }
 
 /*panels*/
 .card {
@@ -3229,24 +3229,24 @@ input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::after {
 /*Radio button*/
 @-webkit-keyframes ripple {
   0% {
-    -webkit-box-shadow: 0px 0px 0px 1px transparent;
-    box-shadow: 0px 0px 0px 1px transparent; }
+    -webkit-box-shadow: 0 0 0 1px transparent;
+    box-shadow: 0 0 0 1px transparent; }
   50% {
-    -webkit-box-shadow: 0px 0px 0px 15px rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 0px 0px 15px rgba(0, 0, 0, 0.1); }
+    -webkit-box-shadow: 0 0 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 15px rgba(0, 0, 0, 0.1); }
   100% {
-    -webkit-box-shadow: 0px 0px 0px 15px transparent;
-    box-shadow: 0px 0px 0px 15px transparent; } }
+    -webkit-box-shadow: 0 0 0 15px transparent;
+    box-shadow: 0 0 0 15px transparent; } }
 @keyframes ripple {
   0% {
-    -webkit-box-shadow: 0px 0px 0px 1px transparent;
-    box-shadow: 0px 0px 0px 1px transparent; }
+    -webkit-box-shadow: 0 0 0 1px transparent;
+    box-shadow: 0 0 0 1px transparent; }
   50% {
-    -webkit-box-shadow: 0px 0px 0px 15px rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 0px 0px 15px rgba(0, 0, 0, 0.1); }
+    -webkit-box-shadow: 0 0 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 15px rgba(0, 0, 0, 0.1); }
   100% {
-    -webkit-box-shadow: 0px 0px 0px 15px transparent;
-    box-shadow: 0px 0px 0px 15px transparent; } }
+    -webkit-box-shadow: 0 0 0 15px transparent;
+    box-shadow: 0 0 0 15px transparent; } }
 
 /*Floating label*/
 /*Bootstrap Select*/
@@ -3979,8 +3979,8 @@ input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::after {
 
 /*Form Validation*/
 .help-block ul {
-  padding: 0px;
-  margin: 0px; }
+  padding: 0;
+  margin: 0; }
   .help-block ul li {
     list-style: none; }
 
@@ -4015,7 +4015,7 @@ Table Cell
   width: 100%; }
 
 .table.no-border tbody td {
-  border: 0px; }
+  border: 0; }
 
 .cell {
   display: table-cell;
@@ -4047,7 +4047,7 @@ Table-Layout
 ******************/
 .table thead th,
 .table th {
-  border: 0px; }
+  border: 0; }
 
 .color-table.primary-table thead th {
   background-color: #745af2;
@@ -4444,13 +4444,13 @@ Table- editable table
   display: block; }
 
 .paging_simple_numbers .pagination .paginate_button {
-  padding: 0px;
+  padding: 0;
   background: #ffffff; }
   .paging_simple_numbers .pagination .paginate_button:hover {
     background: #ffffff; }
   .paging_simple_numbers .pagination .paginate_button a {
     padding: 3px 10px;
-    border: 0px; }
+    border: 0; }
   .paging_simple_numbers .pagination .paginate_button.active a,
   .paging_simple_numbers .pagination .paginate_button:hover a {
     background: #398bf7;
@@ -4544,7 +4544,7 @@ File: scss
   position: absolute;
   /* please don't change 'position' */
   opacity: 0;
-  bottom: 0px;
+  bottom: 0;
   /* there must be 'bottom' for ps__scrollbar-x-rail */
   height: 6px; }
 
@@ -4640,7 +4640,7 @@ File: scss
 .topbar .top-navbar .mailbox {
   width: 300px; }
   .topbar .top-navbar .mailbox ul {
-    padding: 0px; }
+    padding: 0; }
     .topbar .top-navbar .mailbox ul li {
       list-style: none; }
 
@@ -4695,7 +4695,7 @@ File: scss
       width: 75%;
       vertical-align: middle; }
       .mailbox .message-center a .mail-contnet h5 {
-        margin: 5px 0px 0; }
+        margin: 5px 0 0; }
       .mailbox .message-center a .mail-contnet .mail-desc,
       .mailbox .message-center a .mail-contnet .time {
         font-size: 12px;
@@ -4711,7 +4711,7 @@ File: scss
 /*Weather*/
 /*******************/
 .city-weather-days {
-  margin: 0px; }
+  margin: 0; }
   .city-weather-days li {
     text-align: center;
     padding: 15px 0; }
@@ -4744,7 +4744,7 @@ File: scss
     border-bottom: 1px solid rgba(120, 130, 140, 0.13);
     padding: 15px; }
     .comment-widgets .comment-row:last-child {
-      border-bottom: 0px; }
+      border-bottom: 0; }
     .comment-widgets .comment-row:hover, .comment-widgets .comment-row.active {
       background: rgba(0, 0, 0, 0.02); }
 
@@ -4772,9 +4772,9 @@ File: scss
 /*To do widgets*/
 /*******************/
 .todo-list li {
-  border: 0px;
-  margin-bottom: 0px;
-  padding: 20px 15px 15px 0px; }
+  border: 0;
+  margin-bottom: 0;
+  padding: 20px 15px 15px 0; }
   .todo-list li .checkbox {
     width: 100%; }
     .todo-list li .checkbox label {
@@ -4782,15 +4782,15 @@ File: scss
       color: #455a64;
       width: 100%; }
   .todo-list li:last-child {
-    border-bottom: 0px; }
+    border-bottom: 0; }
   .todo-list li .assignedto {
-    padding: 0px 0 0 27px;
-    margin: 0px; }
+    padding: 0 0 0 27px;
+    margin: 0; }
     .todo-list li .assignedto li {
       list-style: none;
-      padding: 0px;
+      padding: 0;
       display: inline-block;
-      border: 0px;
+      border: 0;
       margin-right: 2px; }
       .todo-list li .assignedto li img {
         width: 30px;
@@ -4807,8 +4807,8 @@ File: scss
 /*Chat widget*/
 /*******************/
 .chat-list {
-  margin: 0px;
-  padding: 0px; }
+  margin: 0;
+  padding: 0; }
   .chat-list li {
     list-style: none;
     margin-top: 30px; }
@@ -4841,13 +4841,13 @@ File: scss
     .chat-list li.odd .box {
       clear: both; }
     .chat-list li.odd + .odd {
-      margin-top: 0px; }
+      margin-top: 0; }
     .chat-list li.reverse {
       text-align: right; }
       .chat-list li.reverse .chat-time {
         text-align: left; }
       .chat-list li.reverse .chat-content {
-        padding-left: 0px;
+        padding-left: 0;
         padding-right: 15px; }
 
 /*******************/
@@ -4872,7 +4872,7 @@ File: scss
     .message-box .message-widget a:hover {
       background: #e9edf2; }
     .message-box .message-widget a:last-child {
-      border-bottom: 0px; }
+      border-bottom: 0; }
     .message-box .message-widget a div {
       white-space: normal; }
     .message-box .message-widget a .user-img {
@@ -4904,7 +4904,7 @@ File: scss
       width: 70%;
       vertical-align: middle; }
       .message-box .message-widget a .mail-contnet h5 {
-        margin: 5px 0px 0; }
+        margin: 5px 0 0; }
       .message-box .message-widget a .mail-contnet .mail-desc,
       .message-box .message-widget a .mail-contnet .time {
         font-size: 12px;
@@ -4921,7 +4921,7 @@ File: scss
 /*******************/
 .calendar {
   float: left;
-  margin-bottom: 0px; }
+  margin-bottom: 0; }
 
 .fc-view {
   margin-top: 30px; }
@@ -4949,7 +4949,7 @@ File: scss
   z-index: 0; }
 
 .fc-widget-header {
-  border: 0px !important; }
+  border: 0 !important; }
 
 .fc-widget-content {
   border-color: rgba(120, 130, 140, 0.13) !important; }
@@ -4959,7 +4959,7 @@ File: scss
   font-size: 13px;
   font-weight: 300;
   line-height: 20px;
-  padding: 7px 0px;
+  padding: 7px 0;
   text-transform: uppercase; }
 
 .fc th.fc-sun,
@@ -4974,11 +4974,11 @@ File: scss
   background: #f2f7f8; }
 
 .fc-view {
-  margin-top: 0px; }
+  margin-top: 0; }
 
 .fc-toolbar {
-  margin: 0px;
-  padding: 24px 0px; }
+  margin: 0;
+  padding: 24px 0; }
 
 .fc-button {
   background: #ffffff;
@@ -5010,7 +5010,7 @@ File: scss
   background: #ffffff; }
 
 .fc-event {
-  border-radius: 0px;
+  border-radius: 0;
   border: none;
   cursor: move;
   color: #ffffff !important;
@@ -5115,8 +5115,8 @@ File: scss
 /*Feed widget*/
 /*******************/
 .feeds {
-  margin: 0px;
-  padding: 0px; }
+  margin: 0;
+  padding: 0; }
   .feeds li {
     list-style: none;
     padding: 10px;
@@ -5149,7 +5149,7 @@ File: scss
 .vert .carousel-item-next,
 .vert .active.carousel-item-right {
   -webkit-transform: translate3d(0, 100%, 0);
-  transform: translate3d(0, 100% 0); }
+  transform: translate3d(0, 100%, 0); }
 
 .vert .carousel-item-prev,
 .vert .active.carousel-item-left {
@@ -5182,7 +5182,7 @@ File: scss
   .social-widget .soc-content div {
     padding: 10px; }
     .social-widget .soc-content div h3 {
-      margin-bottom: 0px; }
+      margin-bottom: 0; }
 
 /*******************/
 /*social-profile-first*/
@@ -5302,7 +5302,7 @@ File: scss
     margin-top: 30px;
     margin-bottom: 10px; }
   .country-state h2 {
-    margin-bottom: 0px;
+    margin-bottom: 0;
     font-weight: 400; }
 
 /*contact widgets*/
@@ -5315,7 +5315,7 @@ File: scss
   .contact-box .contact-widget > a {
     padding: 15px 10px; }
     .contact-box .contact-widget > a .user-img {
-      margin-bottom: 0px !important; }
+      margin-bottom: 0 !important; }
 
 /*Blog widgets*/
 .blog-widget {
@@ -5378,7 +5378,7 @@ File: scss
     position: relative;
     vertical-align: middle; }
     .activity-box .activity-item .image-list > a:first-child, .activity-box .activity-item .image-list > a:last-child {
-      margin-left: 0px; }
+      margin-left: 0; }
     .activity-box .activity-item .image-list > a:hover {
       z-index: 10; }
       .activity-box .activity-item .image-list > a:hover img {
@@ -5706,7 +5706,7 @@ File: scss
     width: 200px; }
   .hdr-nav-bar .navbar .navbar-nav > li a {
     padding: 12px 15px;
-    border-bottom: 0px solid transparent;
+    border-bottom: 0 solid transparent;
     border-left: 2px solid transparent; }
   .hdr-nav-bar .navbar .navbar-nav > li:hover a {
     padding: 12px 20px; }
@@ -5730,7 +5730,7 @@ File: scss
     -ms-flex-negative: 0;
     flex-shrink: 0; }
     .navbar-header .navbar-brand {
-      padding-top: 0px; }
+      padding-top: 0; }
   /*This is for the breeadcrumd*/
   .page-titles .breadcrumb {
     float: right; }
@@ -5785,7 +5785,7 @@ File: scss
           position: static; }
           .topbar .top-navbar .navbar-nav > .nav-item.show .dropdown-menu {
             width: 100%;
-            margin-top: 0px; }
+            margin-top: 0; }
         .topbar .top-navbar .navbar-nav > .nav-item > .nav-link {
           padding-left: .50rem;
           padding-right: .50rem; }
@@ -5796,7 +5796,7 @@ File: scss
     overflow: auto; }
   /*Sidebar and wrapper*/
   .mini-sidebar .page-wrapper {
-    margin-left: 0px;
+    margin-left: 0;
     padding-top: 70px; }
   .comment-text .comment-footer .action-icons {
     display: block;
@@ -5808,7 +5808,7 @@ File: scss
     width: 100%; }
   .error-page .footer {
     position: fixed;
-    bottom: 0px;
+    bottom: 0;
     z-index: 10; }
   .error-box {
     position: relative;
@@ -5837,7 +5837,7 @@ File: scss
     transition: 0.5s ease-in;
     background: #ffffff; }
     .chat-main-box .chat-left-aside.open-pnl {
-      left: 0px; }
+      left: 0; }
     .chat-main-box .chat-left-aside .open-panel {
       display: block; }
   .chat-main-box .chat-right-aside {
@@ -5867,9 +5867,9 @@ File: scss
   .left-aside {
     width: 100%;
     position: relative;
-    border: 0px; }
+    border: 0; }
   .right-aside {
-    margin-left: 0px; }
+    margin-left: 0; }
   .flex-wrap {
     -ms-flex-wrap: wrap !important;
     flex-wrap: wrap !important;

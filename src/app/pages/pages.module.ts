@@ -1,5 +1,5 @@
 import {CommonModule} from '@angular/common';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {NgModule} from '@angular/core';
 import {RouterModule} from '@angular/router';
 
@@ -11,8 +11,9 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 import {Graph1Component} from './graph1/graph1.component';
 import {ProgressComponent} from './progress/progress.component';
 import {PagesComponent} from './pages.component';
-import { PromisesComponent } from './promises/promises.component';
-import { RxjsComponent } from './rxjs/rxjs.component';
+import {PromisesComponent} from './promises/promises.component';
+import {RxjsComponent} from './rxjs/rxjs.component';
+import {ProfileComponent} from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { RxjsComponent } from './rxjs/rxjs.component';
     ProgressComponent,
     PagesComponent,
     PromisesComponent,
-    RxjsComponent
+    RxjsComponent,
+    ProfileComponent
   ],
   exports: [
     AccountSettingsComponent,
@@ -36,6 +38,7 @@ import { RxjsComponent } from './rxjs/rxjs.component';
     ComponentModule,
     FormsModule,
     SharedModule,
+    ReactiveFormsModule,
     RouterModule
   ]
 })

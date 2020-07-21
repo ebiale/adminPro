@@ -1,0 +1,53 @@
+<div class="row">
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">My profile</h4>
+        <h6 class="card-subtitle">User Credentials</h6>
+        <form class="form p-t-20" [formGroup]="profileForm" (ngSubmit)="updateProfile()">
+          <div class="form-group">
+            <label for="exampleInputuname">User Name</label>
+            <div class="input-group">
+              <div class="input-group-addon"><i class="ti-user"></i></div>
+              <input type="text" class="form-control" id="exampleInputuname" placeholder="Name" formControlName="name">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <div class="input-group">
+              <div class="input-group-addon"><i class="ti-email"></i></div>
+              <input type="email" class="form-control" [readOnly]="user.google"
+                     id="exampleInputEmail1" placeholder="Email" formControlName="email">
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-block btn-themecolor waves-effect waves-light m-r-10" [disabled]="profileForm.invalid">
+            <i class="fa fa-save"></i>
+            Save Changes
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Avatar</h4>
+        <h6 class="card-subtitle">User Image</h6>
+        <div class="text-center">
+          <img *ngIf="!imgTmp" [src]=user.imgUrl class="img-fluid img-thumbnail mx-auto" alt="" style="height: 155px;">
+          <img *ngIf="imgTmp" [src]=imgTmp class="img-fluid img-thumbnail mx-auto" alt="" style="height: 155px;">
+        </div>
+
+        <input type="file" (change)="changeImage($event.target.files[0])">
+        <br><br>
+        <button type="button" [disabled]="!image" (click)="uploadImage()"
+                class="btn btn-block btn-themecolor waves-effect waves-light m-r-10">
+          <i class="fa fa-save"></i>
+          Save Image
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
