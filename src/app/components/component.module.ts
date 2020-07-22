@@ -4,16 +4,19 @@ import {IncComponent} from './inc/inc.component';
 import {GraphComponent} from './graph/graph.component';
 import {FormsModule} from '@angular/forms';
 import {ChartsModule} from 'ng2-charts';
+import { ModalImgComponent } from './modal-img/modal-img.component';
 
 
 @NgModule({
   declarations: [
     GraphComponent,
     IncComponent,
+    ModalImgComponent,
   ],
   exports: [
     GraphComponent,
     IncComponent,
+    ModalImgComponent,
   ],
   imports: [
     CommonModule,

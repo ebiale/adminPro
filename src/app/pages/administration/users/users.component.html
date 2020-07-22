@@ -1,0 +1,78 @@
+<div class="row animated fadeIn">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+        <input type="text" (keyup)="search(searchBox.value)"
+               class="form-control"
+               placeholder="Search User" #searchBox>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row animated fadeIn" *ngIf="loading">
+  <div class="col-12">
+    <div class="alert alert-info text-center">
+      <h4 class="alert-heading">Loading</h4>
+      <i class="fa fa-spin fa-refresh fa-2x"></i>
+      <p class="mb-0">Please wait</p>
+    </div>
+  </div>
+</div>
+
+<div class="row animated fadeIn" *ngIf="!loading">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Users
+          (<span *ngIf="searchBox.value.length === 0">{{from}}-{{from + 5}}/</span>{{totalCount}})</h4>
+        <h6 class="card-subtitle">Registered Users</h6>
+        <div class="table-responsive">
+          <table class="table table-bordered vm table-hover">
+            <thead>
+            <tr>
+              <th class="w100">Avatar</th>
+              <th>E-mail</th>
+              <th>Name</th>
+              <th class="w140">Role</th>
+              <th class="w100">Auth</th>
+              <th class="text-nowrap w65 text-center"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let user of users">
+              <td class="text-center cursor">
+                <img class="img-fluid img-thumbnail mx-auto avatar"
+                     (click)="updateImage(user)"
+                     [src]=user.imgUrl [alt]=user.name>
+              </td>
+              <td>{{user.email}}</td>
+              <td>{{user.name}}</td>
+              <td>
+                <select class="form-control" [(ngModel)]="user.role" (change)="updateRole(user)">
+                  <option value="ADMIN_ROLE">Admin</option>
+                  <option value="USER_ROLE">User</option>
+                </select>
+              </td>
+              <td class="v-middle">
+                <span *ngIf="user.google" class="label label-danger">Google</span>
+                <span *ngIf="!user.google" class="label label-info">E-mail</span>
+              </td>
+              <td class="text-nowrap w65 text-center v-middle cursor">
+                <a *ngIf="currentUser !== user.uid" (click)="deleteUser(user)"
+                   data-toggle="tooltip" data-original-title="Close">
+                  <i class="fa fa-close text-danger"></i>
+                </a>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <div *ngIf="searchBox.value.length === 0">
+          <button (click)="nextPage(-5)" class="btn btn-secondary" [disabled]="from <= 0">Previous</button>&nbsp;
+          <button (click)="nextPage(5)" class="btn btn-secondary" [disabled]="from >= totalCount">Next</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

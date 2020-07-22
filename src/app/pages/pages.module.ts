@@ -14,6 +14,9 @@ import {PagesComponent} from './pages.component';
 import {PromisesComponent} from './promises/promises.component';
 import {RxjsComponent} from './rxjs/rxjs.component';
 import {ProfileComponent} from './profile/profile.component';
+import { UsersComponent } from './administration/users/users.component';
+import { DoctorsComponent } from './administration/doctors/doctors.component';
+import { HospitalssComponent } from './administration/hospitalss/hospitalss.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import {ProfileComponent} from './profile/profile.component';
     PagesComponent,
     PromisesComponent,
     RxjsComponent,
-    ProfileComponent
+    ProfileComponent,
+    UsersComponent,
+    DoctorsComponent,
+    HospitalssComponent
   ],
   exports: [
     AccountSettingsComponent,

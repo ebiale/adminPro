@@ -75,16 +75,16 @@ File: scss
     padding: 0 10px; }
   .topbar .top-navbar {
     min-height: 70px;
-    padding: 0px; }
+    padding: 0; }
     .topbar .top-navbar .dropdown-toggle::after {
       display: none; }
     .topbar .top-navbar .navbar-header {
       line-height: 55px;
       padding-left: 10px; }
       .topbar .top-navbar .navbar-header .navbar-brand {
-        margin-right: 0px;
-        padding-bottom: 0px;
-        padding-top: 0px; }
+        margin-right: 0;
+        padding-bottom: 0;
+        padding-top: 0; }
         .topbar .top-navbar .navbar-header .navbar-brand .light-logo {
           display: none; }
         .topbar .top-navbar .navbar-header .navbar-brand b {
@@ -114,12 +114,12 @@ File: scss
     .topbar .dropdown-menu .dropdown-item {
       padding: 7px 1.5rem; }
   .topbar ul.dropdown-user {
-    padding: 0px;
+    padding: 0;
     min-width: 270px; }
     .topbar ul.dropdown-user li {
       list-style: none;
-      padding: 0px;
-      margin: 0px; }
+      padding: 0;
+      margin: 0; }
       .topbar ul.dropdown-user li.divider {
         height: 1px;
         margin: 9px 0;
@@ -138,7 +138,7 @@ File: scss
           display: inline-block;
           padding-left: 10px; }
           .topbar ul.dropdown-user li .dw-user-box .u-text h4 {
-            margin: 0px;
+            margin: 0;
             font-size: 15px; }
           .topbar ul.dropdown-user li .dw-user-box .u-text p {
             margin-bottom: 2px;
@@ -160,19 +160,18 @@ File: scss
 
 .search-box .app-search {
   position: absolute;
-  margin: 0px;
-  display: block;
+  margin: 0;
   z-index: 110;
   width: 100%;
   top: -1px;
-  -webkit-box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
-  box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
   display: none;
-  left: 0px; }
+  left: 0; }
   .search-box .app-search input {
     width: 100.5%;
     padding: 25px 40px 25px 20px;
-    border-radius: 0px;
+    border-radius: 0;
     font-size: 17px;
     -webkit-transition: 0.5s ease-in;
     -o-transition: 0.5s ease-in;
@@ -195,7 +194,7 @@ File: scss
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  padding-left: 0px; }
+  padding-left: 0; }
 
 .logo-center .top-navbar .navbar-header {
   position: absolute;
@@ -295,7 +294,7 @@ Notify
   .hdr-nav-bar .navbar .navbar-brand {
     padding: 20px 5px; }
   .hdr-nav-bar .navbar .navbar-toggler {
-    border: 0px;
+    border: 0;
     cursor: pointer; }
   .hdr-nav-bar .navbar .custom-select {
     border-radius: 60px;
@@ -310,18 +309,18 @@ Notify
 .page-titles {
   background: #f4f6f9;
   margin-bottom: 20px;
-  padding: 0px; }
+  padding: 0; }
   .page-titles h3 {
-    margin-bottom: 0px;
-    margin-top: 0px; }
+    margin-bottom: 0;
+    margin-top: 0; }
   .page-titles .breadcrumb {
-    padding: 0px;
-    margin-bottom: 0px;
+    padding: 0;
+    margin-bottom: 0;
     background: transparent;
     font-size: 14px; }
     .page-titles .breadcrumb li {
-      margin-top: 0px;
-      margin-bottom: 0px; }
+      margin-top: 0;
+      margin-bottom: 0; }
     .page-titles .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
       content: "\e649";
       font-family: themify;
@@ -402,7 +401,7 @@ Notify
   display: none;
   z-index: 1100;
   background: #ffffff;
-  top: 0px;
+  top: 0;
   padding-bottom: 20px;
   height: 100%;
   -webkit-box-shadow: 5px 1px 40px rgba(0, 0, 0, 0.1);
@@ -426,14 +425,14 @@ Notify
   .right-sidebar .r-panel-body {
     padding: 20px; }
     .right-sidebar .r-panel-body ul {
-      margin: 0px;
-      padding: 0px; }
+      margin: 0;
+      padding: 0; }
       .right-sidebar .r-panel-body ul li {
         list-style: none;
         padding: 5px 0; }
 
 .shw-rside {
-  right: 0px;
+  right: 0;
   width: 240px;
   display: block; }
 
@@ -586,7 +585,7 @@ ul#themecolors {
 .footer {
   bottom: 0;
   color: #67757c;
-  left: 0px;
+  left: 0;
   padding: 17px 15px;
   position: absolute;
   right: 0;
@@ -608,19 +607,19 @@ Megamenu
   .mega-dropdown .dropdown-menu {
     width: 100%;
     padding: 30px;
-    margin-top: 0px; }
+    margin-top: 0; }
   .mega-dropdown ul {
-    padding: 0px; }
+    padding: 0; }
     .mega-dropdown ul li {
       list-style: none; }
   .mega-dropdown .carousel-item .container {
-    padding: 0px; }
+    padding: 0; }
   .mega-dropdown .nav-accordion .card {
     margin-bottom: 1px; }
   .mega-dropdown .nav-accordion .card-header {
     background: #ffffff; }
     .mega-dropdown .nav-accordion .card-header h5 {
-      margin: 0px; }
+      margin: 0; }
       .mega-dropdown .nav-accordion .card-header h5 a {
         text-decoration: none;
         color: #67757c; }
@@ -743,10 +742,10 @@ Table td vertical middle
   vertical-align: middle; }
 
 .no-th-brd.table th {
-  border: 0px; }
+  border: 0; }
 
 .table.no-border tbody td {
-  border: 0px; }
+  border: 0; }
 
 /*******************
 Other comon js for all pages
@@ -770,11 +769,11 @@ Other comon js for all pages
   display: none; }
 
 .single-column .page-wrapper {
-  margin-left: 0px !important; }
+  margin-left: 0 !important; }
 
 .profile-tab li a.nav-link,
 .customtab li a.nav-link {
-  border: 0px;
+  border: 0;
   padding: 15px 20px;
   color: #67757c; }
   .profile-tab li a.nav-link.active,
@@ -895,7 +894,7 @@ Pagination
   width: 40px;
   height: 40px;
   background: #e9edf2;
-  border: 0px;
+  border: 0;
   text-align: center;
   border-radius: 100%; }
   .pagination-circle li a:first-child, .pagination-circle li a:last-child {
@@ -934,7 +933,7 @@ Buttons
 
 .btn-group label {
   color: #ffffff !important;
-  margin-bottom: 0px; }
+  margin-bottom: 0; }
   .btn-group label.btn-secondary {
     color: #67757c !important; }
 
@@ -1015,8 +1014,7 @@ Buttons
   background-color: #ffffff;
   color: #67757c;
   border-color: #cccccc; }
-  .btn-secondary:hover,
-  .btn-secondary.disabled:hover {
+  .btn-secondary:hover {
     -webkit-box-shadow: 0 14px 26px -12px rgba(169, 169, 169, 0.42), 0 4px 23px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(169, 169, 169, 0.2);
     box-shadow: 0 14px 26px -12px rgba(169, 169, 169, 0.42), 0 4px 23px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(169, 169, 169, 0.2);
     color: #ffffff !important; }
@@ -1467,7 +1465,7 @@ Buttons
   color: #ffffff; }
 
 .button-box .btn {
-  margin: 0 8px 8px 0px; }
+  margin: 0 8px 8px 0; }
 
 .btn-label {
   background: rgba(0, 0, 0, 0.05);
@@ -1546,7 +1544,7 @@ Buttons
 
 .no-button-group .btn {
   margin-bottom: 5px;
-  margin-right: 0px; }
+  margin-right: 0; }
 
 .btn .text-active {
   display: none; }
@@ -1578,7 +1576,7 @@ File: scss
 Custom-select
 ******************/
 .custom-select {
-  background: url(../../assets/images/custom-select.png) right 0.75rem center no-repeat; }
+  background: url(../../../assets/images/custom-select.png) right 0.75rem center no-repeat; }
 
 /*******************
 textarea
@@ -1615,10 +1613,10 @@ form label {
   margin-bottom: 25px; }
 
 .form-horizontal label {
-  margin-bottom: 0px; }
+  margin-bottom: 0; }
 
 .form-control-static {
-  padding-top: 0px; }
+  padding-top: 0; }
 
 .form-bordered .form-group {
   border-bottom: 1px solid rgba(120, 130, 140, 0.13);
@@ -1631,7 +1629,7 @@ Form Dropzone
   border: 1px dashed #b1b8bb; }
   .dropzone .dz-message {
     padding: 5% 0;
-    margin: 0px; }
+    margin: 0; }
 
 /*******************
 Form Pickers
@@ -1724,7 +1722,7 @@ Form addons page
 .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
   float: right;
   color: #ffffff;
-  margin-right: 0px;
+  margin-right: 0;
   margin-left: 4px; }
 
 .select2-container--default .select2-selection--multiple .select2-selection__choice {
@@ -1774,9 +1772,9 @@ Form Material page
   overflow: hidden; }
 
 .form-control-line .form-control {
-  border: 0px;
-  border-radius: 0px;
-  padding-left: 0px;
+  border: 0;
+  border-radius: 0;
+  padding-left: 0;
   border-bottom: 1px solid #f6f9ff; }
   .form-control-line .form-control:focus {
     border-bottom: 1px solid #398bf7; }
@@ -2078,7 +2076,7 @@ form p:last-child {
   width: 20px;
   background-color: transparent;
   border: 1px solid #b1b8bb;
-  top: 0px;
+  top: 0;
   z-index: 0; }
 
 [type="checkbox"].filled-in:checked + label:before {
@@ -2212,9 +2210,9 @@ input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::after {
   -ms-transform: scale(0);
   transform: scale(0);
   display: inline-block;
-  -webkit-transform-origin: right 0px;
-  -ms-transform-origin: right 0px;
-  transform-origin: right 0px; }
+  -webkit-transform-origin: right 0;
+  -ms-transform-origin: right 0;
+  transform-origin: right 0; }
 
 .scale-up-left {
   -webkit-transition: all 0.3s ease;
@@ -2224,25 +2222,25 @@ input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::after {
   -ms-transform: scale(0);
   transform: scale(0);
   display: inline-block;
-  -webkit-transform-origin: left 0px;
-  -ms-transform-origin: left 0px;
-  transform-origin: left 0px; }
+  -webkit-transform-origin: left 0;
+  -ms-transform-origin: left 0;
+  transform-origin: left 0; }
 
 .show > .scale-up {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  -webkit-transform-origin: right 0px;
-  -ms-transform-origin: right 0px;
-  transform-origin: right 0px; }
+  -webkit-transform-origin: right 0;
+  -ms-transform-origin: right 0;
+  transform-origin: right 0; }
 
 .show > .scale-up-left {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  -webkit-transform-origin: left 0px;
-  -ms-transform-origin: left 0px;
-  transform-origin: left 0px; }
+  -webkit-transform-origin: left 0;
+  -ms-transform-origin: left 0;
+  transform-origin: left 0; }
 
 /*panels*/
 .card {
@@ -2267,24 +2265,24 @@ input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::after {
 /*Radio button*/
 @-webkit-keyframes ripple {
   0% {
-    -webkit-box-shadow: 0px 0px 0px 1px transparent;
-    box-shadow: 0px 0px 0px 1px transparent; }
+    -webkit-box-shadow: 0 0 0 1px transparent;
+    box-shadow: 0 0 0 1px transparent; }
   50% {
-    -webkit-box-shadow: 0px 0px 0px 15px rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 0px 0px 15px rgba(0, 0, 0, 0.1); }
+    -webkit-box-shadow: 0 0 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 15px rgba(0, 0, 0, 0.1); }
   100% {
-    -webkit-box-shadow: 0px 0px 0px 15px transparent;
-    box-shadow: 0px 0px 0px 15px transparent; } }
+    -webkit-box-shadow: 0 0 0 15px transparent;
+    box-shadow: 0 0 0 15px transparent; } }
 @keyframes ripple {
   0% {
-    -webkit-box-shadow: 0px 0px 0px 1px transparent;
-    box-shadow: 0px 0px 0px 1px transparent; }
+    -webkit-box-shadow: 0 0 0 1px transparent;
+    box-shadow: 0 0 0 1px transparent; }
   50% {
-    -webkit-box-shadow: 0px 0px 0px 15px rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 0px 0px 15px rgba(0, 0, 0, 0.1); }
+    -webkit-box-shadow: 0 0 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 15px rgba(0, 0, 0, 0.1); }
   100% {
-    -webkit-box-shadow: 0px 0px 0px 15px transparent;
-    box-shadow: 0px 0px 0px 15px transparent; } }
+    -webkit-box-shadow: 0 0 0 15px transparent;
+    box-shadow: 0 0 0 15px transparent; } }
 
 /*Floating label*/
 /*Bootstrap Select*/
@@ -3017,8 +3015,8 @@ input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::after {
 
 /*Form Validation*/
 .help-block ul {
-  padding: 0px;
-  margin: 0px; }
+  padding: 0;
+  margin: 0; }
   .help-block ul li {
     list-style: none; }
 
@@ -3053,7 +3051,7 @@ Table Cell
   width: 100%; }
 
 .table.no-border tbody td {
-  border: 0px; }
+  border: 0; }
 
 .cell {
   display: table-cell;
@@ -3085,7 +3083,7 @@ Table-Layout
 ******************/
 .table thead th,
 .table th {
-  border: 0px; }
+  border: 0; }
 
 .color-table.primary-table thead th {
   background-color: #745af2;
@@ -3482,13 +3480,13 @@ Table- editable table
   display: block; }
 
 .paging_simple_numbers .pagination .paginate_button {
-  padding: 0px;
+  padding: 0;
   background: #ffffff; }
   .paging_simple_numbers .pagination .paginate_button:hover {
     background: #ffffff; }
   .paging_simple_numbers .pagination .paginate_button a {
     padding: 3px 10px;
-    border: 0px; }
+    border: 0; }
   .paging_simple_numbers .pagination .paginate_button.active a,
   .paging_simple_numbers .pagination .paginate_button:hover a {
     background: #398bf7;
@@ -3582,7 +3580,7 @@ File: scss
   position: absolute;
   /* please don't change 'position' */
   opacity: 0;
-  bottom: 0px;
+  bottom: 0;
   /* there must be 'bottom' for ps__scrollbar-x-rail */
   height: 6px; }
 

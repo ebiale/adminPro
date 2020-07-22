@@ -7,7 +7,6 @@ import {LoginForm} from '../interfaces/login-form.interface';
 import {Observable, of} from 'rxjs';
 import {Router} from '@angular/router';
 import {User} from '../models/user.model';
-import {UserForm} from '../interfaces/user-form.interface';
 
 const base_url = environment.base_url;
 declare const gapi: any;
@@ -19,12 +18,16 @@ export class UserService {
 
   public auth2: any;
   public user: User;
-  constructor(private http: HttpClient, private router: Router, private ngZone: NgZone) {
+  constructor(private http: HttpClient,
+              private router: Router,
+              private ngZone: NgZone) {
     this.googleInit();
   }
 
   get token(): string { return localStorage.getItem('token') || ''; }
   get uid(): string { return this.user.uid; }
+  get headers(): any { return { headers: { 'x-token': this.token }}; }
+
   googleInit() {
     return new Promise(resolve => {
       gapi.load('auth2', () => {
@@ -39,11 +42,7 @@ export class UserService {
   }
 
   validateToken(): Observable<boolean> {
-    return this.http.get(`${base_url}/login/renew`, {
-      headers: {
-        'x-token': this.token
-      }
-    }).pipe(
+    return this.http.get(`${base_url}/login/renew`, this.headers).pipe(
       map((resp: any) => {
         const {email, google, name, role, img, uid} = resp.user;
         this.user = new User(name, email, '', google, img, role, uid);
@@ -65,16 +64,29 @@ export class UserService {
       }));
   }
 
-  updateUser(user: UserForm) {
-    user = {...user,
-    role: this.user.role};
-
-    return this.http.put(`${base_url}/users/${this.uid}`, user, {
-      headers: {
-        'x-token': this.token
-      }
-    });
+  updateUser(user: User) {
+     return this.http.put(`${base_url}/users/${user.uid || this.uid}`, user, this.headers);
   }
+
+  getUsers(from: number = 0, limit: number = 5) {
+    const url = `${base_url}/users?from=${from}&limit=${limit}`;
+    return this.http.get(url, this.headers)
+      .pipe(
+        map ( (resp: any) => {
+          const users = resp.users.map(
+            user => new User(user.name, user.email, '', user.google, user.img, user.role, user.uid)
+          );
+
+          return {
+            totalCount: resp.totalCount,
+            users
+          };
+        })
+      );
+  }
+
+  deleteUser(user: User) {
+    return this.http.delete(`${base_url}/users/${user.uid}`, this.headers);  }
 
   login(user: LoginForm) {
     if (user.remember) {

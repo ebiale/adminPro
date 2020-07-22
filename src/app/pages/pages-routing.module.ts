@@ -11,6 +11,9 @@ import {PagesComponent} from './pages.component';
 import {ProfileComponent} from './profile/profile.component';
 import {ProgressComponent} from './progress/progress.component';
 import {PromisesComponent} from './promises/promises.component';
+import {UsersComponent} from './administration/users/users.component';
+import {DoctorsComponent} from './administration/doctors/doctors.component';
+import {HospitalssComponent} from './administration/hospitalss/hospitalss.component';
 
 const routes: Routes = [
   {
@@ -26,6 +29,12 @@ const routes: Routes = [
         {path: 'progress', component: ProgressComponent, data: {title: 'Progress Bar'}},
         {path: 'promises', component: PromisesComponent, data: {title: 'Promises'}},
         {path: 'rxjs', component: RxjsComponent, data: {title: 'RxJs'}},
+
+
+        // admin
+        {path: 'doctors', component: DoctorsComponent, data: {title: 'Doctors'}},
+        {path: 'hospitals', component: HospitalssComponent, data: {title: 'Hospitals'}},
+        {path: 'users', component: UsersComponent, data: {title: 'Users'}},
       ]
   }
 ];

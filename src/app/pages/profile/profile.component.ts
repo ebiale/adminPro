@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {UserService} from '../../services/user.service';
 import {User} from '../../models/user.model';
@@ -26,6 +26,7 @@ export class ProfileComponent implements OnInit {
     this.profileForm = this.fb.group({
       name: [this.user.name, Validators.required],
       email: [this.user.email, [Validators.required, Validators.email]],
+      role: [this.user.role]
     });
   }
 
@@ -57,6 +58,9 @@ export class ProfileComponent implements OnInit {
       .then( img => {
         this.user.img = img;
         Swal.fire('Image updated', 'Success', 'success');
-      });
+      }).catch(err => {
+        console.log(err);
+        Swal.fire('Error', 'Image cannot be uploaded', 'error');
+    });
   }
 }

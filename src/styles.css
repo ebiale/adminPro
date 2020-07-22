@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-#themecolors a, .cursor a {
+#themecolors a, .cursor a, .cursor img {
   cursor: pointer;
 }
 
@@ -16,4 +16,37 @@
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
+}
+
+.w140 {
+  width: 140px;
+  min-width: 140px;
+}
+
+.w100 {
+  width: 100px;
+  min-width: 100px;
+}
+
+.w65 {
+  width: 65px;
+  min-width: 65px;
+}
+
+.avatar {
+  width: 45px;
+}
+
+.dialog-mask {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+
+.hidden {
+  display: none;
 }
