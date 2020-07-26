@@ -4,7 +4,7 @@
       <div class="card-body">
         <input type="text" (keyup)="search(searchBox.value)"
                class="form-control"
-               placeholder="Search Doctor" #searchBox>
+               placeholder="Search User" #searchBox>
       </div>
     </div>
   </div>
@@ -23,17 +23,18 @@
 <div class="row animated fadeIn" *ngIf="!loading">
   <div class="col-12">
     <div class="card">
+
       <div class="card-body">
         <div class="row">
           <div class="col-8">
             <h4 class="card-title">Hospitals
-              (<span *ngIf="searchBox.value.length === 0">{{from}}-{{from + 5}}/</span>{{totalCount}})</h4>
+            (<span *ngIf="searchBox.value.length === 0">{{from}}-{{from + 5}}/</span>{{totalCount}})</h4>
             <h6 class="card-subtitle">Registered Hospitals</h6>
           </div>
           <div class="col">
             <div class="text-right">
-              <a [routerLink]="['new']" class="btn btn-themecolor" (click)="createDoctor()"><i class="fa fa-user-md"></i>
-                Add Doctor</a>
+              <button class="btn btn-themecolor" (click)="createHospital()"><i class="fa fa-hospital-o"></i>
+                Add Hospital</button>
             </div>
           </div>
         </div>
@@ -42,27 +43,35 @@
           <table class="table table-bordered vm table-hover">
             <thead>
             <tr>
-              <th class="w100">Avatar</th>
+              <th class="w100">Picture</th>
               <th>Name</th>
               <th class="text-nowrap w65 text-center"></th>
             </tr>
             </thead>
             <tbody>
-            <tr *ngFor="let doctor of doctors">
+            <tr *ngFor="let hospital of hospitals">
               <td class="text-center cursor">
                 <img class="img-fluid img-thumbnail mx-auto avatar"
-                     (click)="updateImage(doctor)"
-                     [src]="doctor.img | image:'doctors'" [alt]=doctor.name>
+                     (click)="updateImage(hospital)"
+                     [src]="hospital.img | image:'hospitals'" [alt]=hospital.name>
               </td>
-              <td>{{doctor.name}}</td>
+              <td>
+                <span *ngIf="!hospital.edit">{{hospital.name}}</span>
+                <input *ngIf="hospital.edit" type="text" [(ngModel)]="hospital.name"
+                       class="form-control" >
+              </td>
 
               <td class="text-nowrap w65 text-center v-middle cursor">
-                <a [routerLink]="[doctor._id]"
+                <a *ngIf="!hospital.edit" (click)="hospital.edit = true;"
                    data-toggle="tooltip" data-original-title="Edit">
                   <i class="fa fa-pencil text-inverse m-r-10"></i>
                 </a>
-                <a (click)="deleteDoctor(doctor)"
-                   data-toggle="tooltip" data-original-title="Close">
+                <a *ngIf="hospital.edit" (click)="updateHospital(hospital); hospital.edit = false"
+                   data-toggle="tooltip" data-original-title="Save">
+                  <i class="fa fa-check text-success m-r-10"></i>
+                </a>
+                <a (click)="hospital.edit ? hospital.edit = false : deleteHospital(hospital)"
+                   data-toggle="tooltip" data-original-title="{{hospital.edit ? 'Cancel' : 'Close'}}">
                   <i class="fa fa-close text-danger"></i>
                 </a>
               </td>
@@ -71,7 +80,7 @@
           </table>
         </div>
         <div *ngIf="searchBox.value.length === 0">
-          <button (click)="nextPage(-5)" class="btn btn-secondary" [disabled]="from <= 0">Previous</button> &nbsp;
+          <button (click)="nextPage(-5)" class="btn btn-secondary" [disabled]="from <= 0">Previous</button>&nbsp;
           <button (click)="nextPage(5)" class="btn btn-secondary" [disabled]="from + 5 >= totalCount">Next</button>
         </div>
       </div>

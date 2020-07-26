@@ -1,11 +1,12 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {UserService} from '../../../services/user.service';
-import {User} from '../../../models/user.model';
-import {SearchsService} from '../../../services/searchs.service';
 import Swal from 'sweetalert2';
-import {ModalImgService} from '../../../services/modal-img.service';
 import {delay} from 'rxjs/operators';
 import {Subscription} from 'rxjs';
+
+import {User} from '../../../models/user.model';
+import {UserService} from '../../../services/user.service';
+import {SearchsService} from '../../../services/searchs.service';
+import {ModalImgService} from '../../../services/modal-img.service';
 
 @Component({
   selector: 'app-users',

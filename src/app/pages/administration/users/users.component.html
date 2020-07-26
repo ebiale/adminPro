@@ -70,7 +70,7 @@
         </div>
         <div *ngIf="searchBox.value.length === 0">
           <button (click)="nextPage(-5)" class="btn btn-secondary" [disabled]="from <= 0">Previous</button>&nbsp;
-          <button (click)="nextPage(5)" class="btn btn-secondary" [disabled]="from >= totalCount">Next</button>
+          <button (click)="nextPage(5)" class="btn btn-secondary" [disabled]="from + 5>= totalCount">Next</button>
         </div>
       </div>
     </div>

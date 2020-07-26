@@ -13,7 +13,8 @@ import {ProgressComponent} from './progress/progress.component';
 import {PromisesComponent} from './promises/promises.component';
 import {UsersComponent} from './administration/users/users.component';
 import {DoctorsComponent} from './administration/doctors/doctors.component';
-import {HospitalssComponent} from './administration/hospitalss/hospitalss.component';
+import {HospitalsComponent} from './administration/hospitals/hospitals.component';
+import {DoctorComponent} from './administration/doctors/doctor.component';
 
 const routes: Routes = [
   {
@@ -33,7 +34,8 @@ const routes: Routes = [
 
         // admin
         {path: 'doctors', component: DoctorsComponent, data: {title: 'Doctors'}},
-        {path: 'hospitals', component: HospitalssComponent, data: {title: 'Hospitals'}},
+        {path: 'doctors/:id', component: DoctorComponent, data: {title: 'Doctor'}},
+        {path: 'hospitals', component: HospitalsComponent, data: {title: 'Hospitals'}},
         {path: 'users', component: UsersComponent, data: {title: 'Users'}},
       ]
   }

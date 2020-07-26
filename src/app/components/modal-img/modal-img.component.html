@@ -17,7 +17,7 @@
             <img *ngIf="imgTmp" [src]=imgTmp class="img-fluid img-thumbnail mx-auto" alt="" style="height: 155px;">
           </div>
 
-          <input type="file" (change)="changeImage($event.target.files[0])" [value]=image>
+          <input type="file" (change)="changeImage($event.target.files[0])">
 
         </div>
         <div class="modal-footer">

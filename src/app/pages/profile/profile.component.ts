@@ -1,9 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {UserService} from '../../services/user.service';
-import {User} from '../../models/user.model';
-import {FileUploadService} from '../../services/file-upload.service';
 import Swal from 'sweetalert2';
+
+import {User} from '../../models/user.model';
+import {UserService} from '../../services/user.service';
+import {FileUploadService} from '../../services/file-upload.service';
 
 @Component({
   selector: 'app-profile',

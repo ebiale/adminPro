@@ -1,0 +1,79 @@
+<div class="row">
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Update Doctor</h4>
+
+        <form class="form-horizontal p-t-20" [formGroup]="doctorForm" (submit)="saveDoctor()">
+          <div class="form-group row">
+            <label for="name" class="col-sm-3 control-label">Name</label>
+            <div class="col-sm-9">
+              <div class="input-group">
+                <div class="input-group-addon"><i class="ti-user"></i></div>
+                <input type="text" formControlName="name"
+                       class="form-control"
+                       id="name" placeholder="Name">
+              </div>
+            </div>
+          </div>
+
+
+          <div class="form-group row" *ngIf="doctor">
+            <label class="col-sm-3 control-label"></label>
+            <div class="col-sm-9">
+              <div class="input-group">
+                <img [src]="doctor.img | image: 'doctors'"
+                     class="img-fluid img-thumbnail mx-auto" alt="" style="height: 120px;">
+                <!--
+                              <img *ngIf="imgTmp" [src]=imgTmp class="img-fluid img-thumbnail mx-auto" alt="" style="height: 155px;">
+                -->
+
+              </div>
+              <input type="file">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="hospitals" class="col-sm-3 control-label">Hospitals</label>
+            <div class="col-sm-9">
+              <div class="input-group">
+                <div class="input-group-addon"><i class="fa fa-hospital-o"></i></div>
+                <select name="hospitals" id="hospitals" class="form-control" formControlName="hospital">
+                  <option value="">Select hospital</option>
+                  <option *ngFor="let hosp of hospitals" [value]="hosp._id">{{hosp.name}}</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group row m-b-0">
+            <div class="offset-sm-3 col-sm-9">
+              <button type="submit" class="btn btn-themecolor waves-effect waves-light m-r-10"
+                      [disabled]="doctorForm.invalid">
+                <i class="fa fa-save"></i>
+                Save
+              </button>
+              <a [routerLink]="['../']" class="btn btn-secondary waves-effect waves-light">
+                Cancel
+              </a>
+
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Hospital</h4>
+        <h6>{{selectedHospital ? selectedHospital.name : 'Select an hospital'}}</h6>
+        <div class="text-center">
+          <img [src]="selectedHospital?.img | image:'hospitals'"
+               class="img-fluid img-thumbnail mx-auto" alt="" style="height: 333px;">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

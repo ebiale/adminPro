@@ -4,6 +4,7 @@ import {NgModule} from '@angular/core';
 import {RouterModule} from '@angular/router';
 
 import {ComponentModule} from '../components/component.module';
+import {PipesModule} from '../pipes/pipes.module';
 import {SharedModule} from '../shared/shared.module';
 
 import {AccountSettingsComponent} from './account-settings/account-settings.component';
@@ -14,23 +15,25 @@ import {PagesComponent} from './pages.component';
 import {PromisesComponent} from './promises/promises.component';
 import {RxjsComponent} from './rxjs/rxjs.component';
 import {ProfileComponent} from './profile/profile.component';
-import { UsersComponent } from './administration/users/users.component';
-import { DoctorsComponent } from './administration/doctors/doctors.component';
-import { HospitalssComponent } from './administration/hospitalss/hospitalss.component';
+import {UsersComponent} from './administration/users/users.component';
+import {DoctorsComponent} from './administration/doctors/doctors.component';
+import {HospitalsComponent} from './administration/hospitals/hospitals.component';
+import {DoctorComponent} from './administration/doctors/doctor.component';
 
 @NgModule({
   declarations: [
     AccountSettingsComponent,
     DashboardComponent,
+    DoctorsComponent,
     Graph1Component,
+    HospitalsComponent,
     ProgressComponent,
     PagesComponent,
+    ProfileComponent,
     PromisesComponent,
     RxjsComponent,
-    ProfileComponent,
     UsersComponent,
-    DoctorsComponent,
-    HospitalssComponent
+    DoctorComponent
   ],
   exports: [
     AccountSettingsComponent,
@@ -43,9 +46,10 @@ import { HospitalssComponent } from './administration/hospitalss/hospitalss.comp
     CommonModule,
     ComponentModule,
     FormsModule,
-    SharedModule,
+    PipesModule,
     ReactiveFormsModule,
-    RouterModule
+    RouterModule,
+    SharedModule
   ]
 })
 export class PagesModule {}

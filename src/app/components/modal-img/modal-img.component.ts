@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import {ModalImgService} from '../../services/modal-img.service';
+import {Component, OnInit} from '@angular/core';
 import Swal from 'sweetalert2';
+
+import {ModalImgService} from '../../services/modal-img.service';
 import {FileUploadService} from '../../services/file-upload.service';
 
 @Component({
@@ -14,9 +15,7 @@ export class ModalImgComponent implements OnInit {
 
   constructor(public modalImgService: ModalImgService, private fileUploadService: FileUploadService) { }
 
-  ngOnInit(): void {
-    console.log('here');
-  }
+  ngOnInit(): void {}
 
   closeDialog() {
     this.imgTmp = null;

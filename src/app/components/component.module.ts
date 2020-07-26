@@ -1,10 +1,11 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {IncComponent} from './inc/inc.component';
-import {GraphComponent} from './graph/graph.component';
 import {FormsModule} from '@angular/forms';
 import {ChartsModule} from 'ng2-charts';
-import { ModalImgComponent } from './modal-img/modal-img.component';
+
+import {IncComponent} from './inc/inc.component';
+import {GraphComponent} from './graph/graph.component';
+import {ModalImgComponent} from './modal-img/modal-img.component';
 
 
 @NgModule({
@@ -24,4 +25,5 @@ import { ModalImgComponent } from './modal-img/modal-img.component';
     ChartsModule
   ]
 })
-export class ComponentModule {}
+export class ComponentModule {
+}

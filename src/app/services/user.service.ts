@@ -85,6 +85,22 @@ export class UserService {
       );
   }
 
+  getUserById(uid) {
+    const url = `${base_url}/users/${uid}`;
+    return this.http.get(url, this.headers)
+      .pipe(
+        map ( (resp: any) => {
+          const user = resp.map(
+            u => new User(u.name, u.email, '', u.google, u.img, u.role, u.uid)
+          );
+
+          return {
+            user
+          };
+        })
+      );
+  }
+
   deleteUser(user: User) {
     return this.http.delete(`${base_url}/users/${user.uid}`, this.headers);  }
 

@@ -1,20 +1,10 @@
-/*
-import {environment} from '../../environments/environment';
-
-const base_url = environment.base_url;
-*/
+import {User} from './user.model';
 
 export class Hospital {
   constructor(public name: string,
-              public uid ?: string) {}
-
- /* get imgUrl() {
-    if (this.img && this.img.includes('https')) {
-      return this.img;
-    }
-    if (this.img){
-      return `${base_url}/upload/users/${this.img}`;
-    }
-    return `${base_url}/upload/users/no-image`;
-  }*/
+              public user?: User,
+              public img?: string,
+              public _id?: string,
+              public edit?: boolean) {
+  }
 }

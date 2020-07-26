@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import Swal from 'sweetalert2';
-import {UserService} from '../../services/user.service';
 import {Router} from '@angular/router';
+import Swal from 'sweetalert2';
+
+import {UserService} from '../../services/user.service';
 
 @Component({
   selector: 'app-register',

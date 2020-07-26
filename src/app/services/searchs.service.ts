@@ -27,7 +27,7 @@ export class SearchsService {
   }
 
   private transformHospitals(res: any[]): Hospital[] {
-    return res.map(hospital => new Hospital(hospital.name, hospital.uid));
+    return res.map(hospital => new Hospital(hospital.name, hospital._id));
   }
 
   search(type: 'users'|'doctors'|'hospitals', search: string = '') {

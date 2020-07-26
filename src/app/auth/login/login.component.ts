@@ -1,15 +1,16 @@
 import {Component, NgZone, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {FormBuilder, Validators} from '@angular/forms';
-import {UserService} from '../../services/user.service';
 import Swal from 'sweetalert2';
+
+import {UserService} from '../../services/user.service';
 
 declare const gapi: any;
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: [ './login.component.css' ]
+  styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
 

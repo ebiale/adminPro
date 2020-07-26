@@ -1,5 +1,4 @@
-import {Component, ElementRef, Inject, OnInit} from '@angular/core';
-import {DOCUMENT} from '@angular/common';
+import {Component, OnInit} from '@angular/core';
 import {SettingsService} from '../../services/settings.service';
 
 @Component({
@@ -8,6 +7,7 @@ import {SettingsService} from '../../services/settings.service';
   styles: [
   ]
 })
+
 export class AccountSettingsComponent implements OnInit {
   private links;
   constructor(private settingsService: SettingsService) { }
