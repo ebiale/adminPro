@@ -93,7 +93,6 @@ export class UsersComponent implements OnInit, OnDestroy {
 
   updateRole(user) {
     this.userService.updateUser(user).subscribe(res => {
-      console.log(res);
       Swal.fire('Role Updated', `${user.name} was updated`, 'success');
     });
   }

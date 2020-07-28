@@ -19,6 +19,7 @@ import {UsersComponent} from './administration/users/users.component';
 import {DoctorsComponent} from './administration/doctors/doctors.component';
 import {HospitalsComponent} from './administration/hospitals/hospitals.component';
 import {DoctorComponent} from './administration/doctors/doctor.component';
+import { GlobalSearchComponent } from './global-search/global-search.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import {DoctorComponent} from './administration/doctors/doctor.component';
     PromisesComponent,
     RxjsComponent,
     UsersComponent,
-    DoctorComponent
+    DoctorComponent,
+    GlobalSearchComponent
   ],
   exports: [
     AccountSettingsComponent,

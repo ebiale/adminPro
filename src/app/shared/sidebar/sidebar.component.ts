@@ -10,10 +10,9 @@ import {UserService} from '../../services/user.service';
 })
 export class SidebarComponent {
   public user;
-  menuItems: any;
-  constructor(private sidebarService: SidebarService,
+
+  constructor(public sidebarService: SidebarService,
               private userService: UserService) {
-    this.menuItems = sidebarService.menu;
     this.user = userService.user;
   }
 

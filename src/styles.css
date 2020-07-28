@@ -50,3 +50,7 @@
 .hidden {
   display: none;
 }
+
+h4.btn-link {
+  cursor: pointer;
+}

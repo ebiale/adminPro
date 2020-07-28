@@ -1,0 +1,85 @@
+<div class="row animated fadeIn">
+  <div class="col-4">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title  btn-link" (click)="goToUsers()">Users</h4>
+        <div *ngIf="!users" class="alert alert-info animated fadeIn">
+          <p class="mb-0">No Users Found</p>
+        </div>
+        <div *ngIf="users" class="table-responsive animated fadeIn">
+          <table class="table">
+            <thead>
+            <tr>
+              <th></th>
+              <th>Name</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let user of users">
+              <td><img [src]="user.img | image: 'users'"
+                       class="img-fluid img-thumbnail mx-auto" alt="" style="height: 50px;"></td>
+              <td>{{user.name}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-4">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title btn-link" (click)="goToDoctors()">Doctors</h4>
+        <div *ngIf="!doctors" class="alert alert-info animated fadeIn">
+          <p class="mb-0">No Doctors Found</p>
+        </div>
+        <div *ngIf="doctors" class="table-responsive animated fadeIn">
+          <table class="table table-bordered vm table-hover">
+            <thead>
+            <tr>
+              <th></th>
+              <th>Name</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let dr of doctors" (click)="goToDoctor(dr._id)" style="cursor: pointer;">
+              <td><img [src]="dr.img | image: 'doctors'"
+                       class="img-fluid img-thumbnail mx-auto" alt="" style="height: 50px;"></td>
+              <td>{{dr.name}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-4">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title  btn-link" (click)="goToHospitals()">Hospitals</h4>
+        <div *ngIf="!hospitals" class="alert alert-info animated fadeIn">
+          <p class="mb-0">No Hospitals Found</p>
+        </div>
+        <div *ngIf="hospitals" class="table-responsive animated fadeIn">
+          <table class="table">
+            <thead>
+            <tr>
+              <th></th>
+              <th>Name</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let hosp of hospitals">
+              <td><img [src]="hosp.img | image: 'hospitals'"
+                       class="img-fluid img-thumbnail mx-auto" alt="" style="height: 50px;"></td>
+              <td>{{hosp.name}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

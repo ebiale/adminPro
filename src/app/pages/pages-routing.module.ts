@@ -15,6 +15,8 @@ import {UsersComponent} from './administration/users/users.component';
 import {DoctorsComponent} from './administration/doctors/doctors.component';
 import {HospitalsComponent} from './administration/hospitals/hospitals.component';
 import {DoctorComponent} from './administration/doctors/doctor.component';
+import {GlobalSearchComponent} from './global-search/global-search.component';
+import {AdminGuard} from '../guards/admin.guard';
 
 const routes: Routes = [
   {
@@ -30,13 +32,14 @@ const routes: Routes = [
         {path: 'progress', component: ProgressComponent, data: {title: 'Progress Bar'}},
         {path: 'promises', component: PromisesComponent, data: {title: 'Promises'}},
         {path: 'rxjs', component: RxjsComponent, data: {title: 'RxJs'}},
+        {path: 'global-search/:search', component: GlobalSearchComponent, data: {title: 'Global Search'}},
 
 
         // admin
         {path: 'doctors', component: DoctorsComponent, data: {title: 'Doctors'}},
         {path: 'doctors/:id', component: DoctorComponent, data: {title: 'Doctor'}},
         {path: 'hospitals', component: HospitalsComponent, data: {title: 'Hospitals'}},
-        {path: 'users', component: UsersComponent, data: {title: 'Users'}},
+        {path: 'users', canActivate: [AdminGuard], component: UsersComponent, data: {title: 'Users'}},
       ]
   }
 ];

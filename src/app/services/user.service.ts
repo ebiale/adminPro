@@ -26,6 +26,7 @@ export class UserService {
 
   get token(): string { return localStorage.getItem('token') || ''; }
   get uid(): string { return this.user.uid; }
+  get role(): string { return this.user.role; }
   get headers(): any { return { headers: { 'x-token': this.token }}; }
 
   googleInit() {
@@ -46,7 +47,7 @@ export class UserService {
       map((resp: any) => {
         const {email, google, name, role, img, uid} = resp.user;
         this.user = new User(name, email, '', google, img, role, uid);
-        localStorage.setItem('token', resp.token);
+        this.saveInLocalStorage(resp.token, resp.menu);
         return true;
       }),
       catchError(() => of(false))
@@ -59,7 +60,7 @@ export class UserService {
         localStorage.setItem('id', resp.id);
         localStorage.setItem('token', resp.token);
         localStorage.setItem('user', JSON.stringify(resp.user));
-
+        this.saveInLocalStorage(resp.token, resp.menu);
         return true;
       }));
   }
@@ -114,7 +115,7 @@ export class UserService {
     return this.http.post(`${base_url}/login`, user).pipe(
       map((resp: any) => {
         localStorage.setItem('id', resp.id);
-        localStorage.setItem('token', resp.token);
+        this.saveInLocalStorage(resp.token, resp.menu);
         localStorage.setItem('user', JSON.stringify(resp.user));
 
         return true;
@@ -124,18 +125,24 @@ export class UserService {
   loginGoogle(token) {
     return this.http.post(`${base_url}/login/google`, {token}).pipe(
       map((resp: any) => {
-        localStorage.setItem('token', resp.token);
+        this.saveInLocalStorage(resp.token, resp.menu);
         return true;
       }));
   }
 
   logout() {
     localStorage.removeItem('token');
+    localStorage.removeItem('menu');
 
     this.auth2.signOut().then(() => {
       this.ngZone.run(() => {
         this.router.navigateByUrl('/login');
       });
     });
+  }
+
+  private saveInLocalStorage(token: string, menu: any) {
+    localStorage.setItem('token', token);
+    localStorage.setItem('menu', JSON.stringify(menu));
   }
 }

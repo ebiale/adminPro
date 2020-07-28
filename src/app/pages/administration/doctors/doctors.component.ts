@@ -31,7 +31,7 @@ export class DoctorsComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.subscriptions.push(this.modalImgService.imageUdated
       .pipe(delay(100))
-      .subscribe(() => { this.getDoctors(); console.log('updated'); }));
+      .subscribe(() => { this.getDoctors(); }));
     this.getDoctors();
   }
 
